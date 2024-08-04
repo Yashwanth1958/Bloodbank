@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EMERGENCY BLOOD REQUEST ADMIN</title>
+    <link rel ="stylesheet" href="/public/webpage.css">
+</head>
+<body>
+<h1>Blood Emergency Data</h1>
+
+<table style="background-color: #f2f4f6;">
+<tr>
+    <th>Patient Name</th>
+    <th>Age</th>
+    <th>Blood Group</th>
+    <th>Hospital Name & Location</th>
+    <th>Contact Number</th>
+    <th>Close Of Emergency Time & Date</th>
+</tr>
+<% emerbase.forEach(function (emer){%>
+<tr>
+    <td><%= emer.patient%></td>
+    <td><%= emer.age %></td>
+    <td><%= emer.blood %></td>
+    <td><%= emer.hospital %></td>
+    <td><%= emer.contactnumber %></td>
+    <td><%= emer.closeofemergency%></td>
+</tr>
+<% })%>
+</table>
+<a href="/views/adminwebpage.ejs" style="position: absolute; top: 35px; left: 50px; background-color: #444; color: white;">BACK</a>
+</body>
+</html>

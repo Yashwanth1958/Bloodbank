@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>REGESTRED DATA BASE ADMIN</title>
+    <link rel ="stylesheet" href="/public/webpage.css">
+</head>
+<body>
+<h1>Registerd Data</h1>
+
+<table style="background-color: #f2f4f6;">
+    <tr>  
+        <th>name</th>
+        <th>email</th>
+        <th>mobile</th>
+        <th>usrname</th>
+        <th>password</th>
+        <th>bloodtype</th>
+        <th>district</th>
+       
+    </tr>
+    <% resultlist.forEach( function (result) { %>
+    <tr>
+
+    <td><%= result.name %></td>
+    <td><%= result.email %></td>
+    <td><%= result.mobile %></td>
+    <td><%= result.username %></td>
+    <td><%= result.password %></td>
+    <td><%=result.bloodtype %></td>
+    <td><%= result.district %> </td>
+    
+    <% } ); %>
+        
+    </tr>
+   
+    </table>
+    <a href="/views/adminwebpage.ejs" style="position: absolute; top: 20px; left: 50px; background-color: #444; color: white;">BACK</a>
+    </body>
+    </html>
+

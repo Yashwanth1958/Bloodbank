@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>DONOR LIST</title>
+        <link rel ="stylesheet" href="/public/webpage.css">
+    </head>
+    <body >
+        <h1>THIS IS BLOOD DONOR LIST</h1>
+        <table style="background-color: #f2f4f6;">
+            <tr>
+            <th>Name</th>
+            <th>Mobile Number</th>
+            <th>Blood Group</th>
+            <th>District</th>
+            </tr>
+            
+            <% renderdata.forEach(function (render){ %>
+            <tr>
+            <td><%= render.name %></td>
+            <td><%= render.mobile %></td>
+            <td><%= render.bloodtype %></td>
+            <td><%= render.district %></td>
+            <% } )%>
+
+
+            </tr>
+        </table>
+        <a href="/views/webpage.ejs" style="position: absolute; top: 25px; right: 30px; background-color: #444; color: white;"> LOG OUT </a>
+    </body>
+</html>
